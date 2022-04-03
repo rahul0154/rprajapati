@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #c0c0c0;
+}
+body {
+    color: #222;
+    font-family: Arial;
+    font-size: 14px;
+}
+
+.hide{
+    display: none;
+}
+
+@media (min-width: 480px){
+    main {
+        box-sizing: border-box;
+        width: 100%;
+        margin: 0;
+        padding: 16px;
+    }
+    .container{
+        box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
+        padding: 3px;
+    }
+
+    .resume-header .details{
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body{
+        margin-bottom: 150px;
+    }
+    .resume-header .details{
+        margin-top: 25px !important;
+    }
+}
+
+hr {
+    margin: 25px 0px;
+    border: none;
+    opacity: 0.5;
+    background: linear-gradient( to right, red 20%, yellow 20%, yellow 36%, green 36%, green 60%, blue 60%, blue 100% );
+}
+.svg-inline--fa.fa-fw {
+    width: 1.25em
+}
+
+.row.resume-header {
+    margin-top: 25px;
+}
+
+.resume-picture-holder .picture {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.resume-header .details{
+    margin: auto;
+}
+
+a {
+    color: black;
+    text-decoration: auto;
+}
+
+.window{
+    margin: 25px 0px;
+}
+
+.window-body li {
+    margin: 10px 0px;
+}
