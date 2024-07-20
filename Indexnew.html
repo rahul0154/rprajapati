@@ -34,11 +34,13 @@
         h3 {
             font-size: 18px;
         }
-        .section {
+        .card {
+            background: #fafafa;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 15px;
             margin-bottom: 20px;
-        }
-        .section p {
-            margin: 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         .contact-info {
             margin-bottom: 20px;
@@ -47,7 +49,7 @@
             color: #2196F3;
             text-decoration: none;
         }
-        .skills, .experience, .education, .awards {
+        .skills ul, .experience ul, .education ul, .awards ul {
             list-style: none;
             padding: 0;
         }
@@ -74,40 +76,55 @@
             </div>
         </header>
         
-        <section class="section">
+        <section class="card">
             <h2>Professional Summary</h2>
             <p>Experienced Team Lead with 5 years in web development and PHP. Skilled in using PHP, WordPress, Symfony, and Ionic to build effective solutions. Proven track record in managing projects, leading teams, and working closely with clients. Known for delivering quality results and integrating systems smoothly.</p>
         </section>
         
-        <section class="section">
+        <section class="card">
             <h2>Skills</h2>
-            <ul class="skills">
-                <li>PHP, WordPress, Symfony, CakePHP, Ionic, Angular</li>
-                <li>HTML, CSS, JavaScript</li>
-                <li>MySQL, MS SQL</li>
-                <li>RESTful API development</li>
-                <li>E-Commerce development and integration</li>
-                <li>Customizing Vtiger CRM</li>
-                <li>Building custom modules, portals, helpdesks, invoices, quotes, and workflows</li>
-                <li>API integration and customizations</li>
-                <li>Object-Oriented Programming (OOP)</li>
-                <li>Model-View-Controller (MVC) architecture</li>
-                <li>Debugging and Code Refactoring</li>
-                <li>Linux and Apache server management</li>
-                <li>Leading project development and execution</li>
-                <li>Motivating and managing teams</li>
-                <li>Communicating with clients and gathering requirements</li>
-                <li>Problem-solving and decision-making</li>
-                <li>Time management and team collaboration</li>
-                <li>Agile methodologies and Scrum</li>
-                <li>GIT (GitHub), SVN</li>
-                <li>Web2Cal, Trello, Monday.com</li>
-                <li>PHPStorm, Sublime, VS Code</li>
-                <li>Postman, Workbench</li>
-            </ul>
+            <div class="skills">
+                <h3>Web Development</h3>
+                <ul>
+                    <li>PHP, WordPress, Symfony, CakePHP, Ionic, Angular</li>
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>MySQL, MS SQL</li>
+                    <li>RESTful API development</li>
+                    <li>E-Commerce development and integration</li>
+                </ul>
+                <h3>CRM and Vtiger</h3>
+                <ul>
+                    <li>Customizing Vtiger CRM</li>
+                    <li>Building custom modules, portals, helpdesks, invoices, quotes, and workflows</li>
+                    <li>API integration and customizations</li>
+                </ul>
+                <h3>Software Development</h3>
+                <ul>
+                    <li>Object-Oriented Programming (OOP)</li>
+                    <li>Model-View-Controller (MVC) architecture</li>
+                    <li>Debugging and Code Refactoring</li>
+                    <li>Linux and Apache server management</li>
+                </ul>
+                <h3>Project Management and Team Leadership</h3>
+                <ul>
+                    <li>Leading project development and execution</li>
+                    <li>Motivating and managing teams</li>
+                    <li>Communicating with clients and gathering requirements</li>
+                    <li>Problem-solving and decision-making</li>
+                    <li>Time management and team collaboration</li>
+                    <li>Agile methodologies and Scrum</li>
+                </ul>
+                <h3>Tools and Environments</h3>
+                <ul>
+                    <li>GIT (GitHub), SVN</li>
+                    <li>Web2Cal, Trello, Monday.com</li>
+                    <li>PHPStorm, Sublime, VS Code</li>
+                    <li>Postman, Workbench</li>
+                </ul>
+            </div>
         </section>
         
-        <section class="section">
+        <section class="card">
             <h2>Professional Experience</h2>
             <h3>BrainStream Technolabs PVT LTD, Ahmedabad, Gujarat</h3>
             <p><strong>Team Lead</strong> (01 Jun 2019 - Present)</p>
@@ -125,14 +142,14 @@
             </ul>
         </section>
         
-        <section class="section">
+        <section class="card">
             <h2>Education</h2>
             <p><strong>Bachelor of Information Technology (BE)</strong><br>
             Gujarat Technological University, Ahmedabad<br>
             Graduated April 2019</p>
         </section>
         
-        <section class="section">
+        <section class="card">
             <h2>Awards</h2>
             <ul class="awards">
                 <li>Extra Mile Award, 2024</li>
@@ -143,7 +160,7 @@
             </ul>
         </section>
         
-        <footer>
+        <footer class="card">
             <p>I hereby declare that the above information is true to the best of my knowledge.</p>
             <p><strong>Rahul Prajapati</strong></p>
         </footer>
