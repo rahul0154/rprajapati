@@ -244,7 +244,7 @@
     <!-- Include jsPDF library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script>
-       function generatePDF() {
+      function generatePDF() {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
 
@@ -263,21 +263,25 @@
         y += 10; // Add some space between sections
         doc.setFontSize(18);
         doc.text(title, 105, y, { align: "center" });
-        y += 10;
+        y += 15;
 
         // Section content
-        const content = section.querySelector('.skills') || section.querySelector('.experience') || section.querySelector('ul');
-        if (content) {
-            // Add HTML content to PDF
-            doc.setFontSize(12);
-            doc.setTextColor(0); // Black color
-            y = doc.autoTableHtmlToJson(content).autoTable.finalY + 10;
-        }
-    });
+        const content = section.querySelectorAll('ul li');
+        if (content.length > 0) {
+            // Add list items to PDF
+            content.forEach(item => {
+                y += 10;
+                doc.setFontSize(12);
+                doc.text(item.innerText, 20, y);
+            });
+        } else {
+            // Handle paragraph content if lists are not available
+            const paragraphs = section.querySelectorAll('p');
+            if (paragraphs.length > 0) {
+                paragraphs.forEach(p => {
+                    y += 10;
+                    doc.setFon
 
-    // Save PDF
-    doc.save('resume.pdf');
-}
 
     </script>
 </body>
