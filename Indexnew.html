@@ -244,13 +244,41 @@
     <!-- Include jsPDF library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script>
-        function generatePDF() {
-            const { jsPDF } = window.jspdf;
-            const doc = new jsPDF();
-            doc.text("Rahul Prajapati", 10, 10);
-            // Add more content from your HTML here
-            doc.save('resume.pdf');
+       function generatePDF() {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+    // Set the initial y position for the first page content (adjust as needed)
+    let y = 20;
+
+    // Title
+    doc.setFontSize(22);
+    doc.text("Resume - Rahul Prajapati", 105, y, { align: "center" });
+    y += 10;
+
+    // Loop through each section and add content to PDF
+    document.querySelectorAll('.card').forEach(section => {
+        // Section title
+        const title = section.querySelector('h2.section-title').innerText;
+        y += 10; // Add some space between sections
+        doc.setFontSize(18);
+        doc.text(title, 105, y, { align: "center" });
+        y += 10;
+
+        // Section content
+        const content = section.querySelector('.skills') || section.querySelector('.experience') || section.querySelector('ul');
+        if (content) {
+            // Add HTML content to PDF
+            doc.setFontSize(12);
+            doc.setTextColor(0); // Black color
+            y = doc.autoTableHtmlToJson(content).autoTable.finalY + 10;
         }
+    });
+
+    // Save PDF
+    doc.save('resume.pdf');
+}
+
     </script>
 </body>
 </html>
