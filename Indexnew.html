@@ -112,6 +112,18 @@
         .footer p {
             margin: 5px 0;
         }
+        .download-button {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #2196F3;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
         @media (max-width: 768px) {
             .container {
                 padding: 15px;
@@ -143,7 +155,7 @@
         
         <section class="card">
             <h2 class="section-title">Professional Summary</h2>
-            <p>Experienced Team Lead with 5 years in web development and PHP. Skilled in using PHP, WordPress, Symfony, and Ionic to build effective solutions. Proven track record in managing projects, leading teams, and working closely with clients. Known for delivering quality results and integrating systems smoothly.</p>
+            <p>PHP developer and team lead specializing in web development and Vtiger CRM. Experienced in building solutions, leading projects, and integrating systems. Passionate about exploring new technologies.</p>
         </section>
         
         <section class="card">
@@ -209,14 +221,36 @@
         
         <section class="card">
             <h2 class="section-title">Education</h2>
-            <p><strong>Bachelor of Information Technology (BE)</strong><br>
-            Gujarat Technological University, Ahmedabad<br>
-            Graduated April 2019</p>
+            <h3>Bachelor of Information Technology (BE)</h3>
+            <p>Gujarat Technological University, Ahmedabad (Graduated April 2019)</p>
         </section>
         
         <section class="card">
             <h2 class="section-title">Awards</h2>
-            <ul class="awards">
+            <ul>
                 <li>Extra Mile Award, 2024</li>
                 <li>Excellence Award, 2023</li>
-               
+                <li>Best Team of the Year, 2022</li>
+                <li>Best Team of the Year, 2021</li>
+                <li>Client Appreciation Award, 2020</li>
+            </ul>
+        </section>
+        
+        <footer class="footer">
+            <button class="download-button" onclick="generatePDF()">Download PDF</button>
+        </footer>
+    </div>
+    
+    <!-- Include jsPDF library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+        function generatePDF() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+            doc.text("Rahul Prajapati", 10, 10);
+            // Add more content from your HTML here
+            doc.save('resume.pdf');
+        }
+    </script>
+</body>
+</html>
