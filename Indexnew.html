@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume - Rahul Prajapati</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -36,19 +37,21 @@
             margin: 5px 0;
             font-size: 16px;
         }
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
         .contact-info a {
             color: #2196F3;
             text-decoration: none;
-        }
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-        .contact-info a.phone {
             display: flex;
             align-items: center;
+            margin: 5px 0;
         }
-        .contact-info a.phone i {
+        .contact-info a i {
             margin-right: 8px;
+            color: #2196F3;
         }
         .card {
             background: #f9f9f9;
@@ -109,11 +112,6 @@
         .footer p {
             margin: 5px 0;
         }
-        .icons {
-            font-size: 16px;
-            margin-right: 8px;
-            color: #2196F3;
-        }
         @media (max-width: 768px) {
             .container {
                 padding: 15px;
@@ -136,10 +134,10 @@
             <h1>Rahul Prajapati</h1>
             <div class="contact-info">
                 <p>Palanpur, Gujarat, 385001</p>
-                <p>Email: <a href="mailto:prajapatirahul322@gmail.com"><i class="icons">✉️</i>prajapatirahul322@gmail.com</a></p>
-                <p>Phone: <a href="tel:7383860154" class="phone"><i class="icons">📞</i>7383860154</a></p>
-                <p>LinkedIn: <a href="https://www.linkedin.com/in/rahul0154" target="_blank"><i class="icons">🔗</i>linkedin.com/in/rahul0154</a></p>
-                <p>GitHub: <a href="https://github.com/rahul0154" target="_blank"><i class="icons">🔗</i>github.com/rahul0154</a></p>
+                <a href="mailto:prajapatirahul322@gmail.com"><i class="fas fa-envelope"></i>prajapatirahul322@gmail.com</a>
+                <a href="tel:7383860154"><i class="fas fa-phone"></i>7383860154</a>
+                <a href="https://www.linkedin.com/in/rahul0154" target="_blank"><i class="fab fa-linkedin"></i>linkedin.com/in/rahul0154</a>
+                <a href="https://github.com/rahul0154" target="_blank"><i class="fab fa-github"></i>github.com/rahul0154</a>
             </div>
         </header>
         
@@ -221,16 +219,4 @@
             <ul class="awards">
                 <li>Extra Mile Award, 2024</li>
                 <li>Excellence Award, 2023</li>
-                <li>Best Team of the Year, 2022</li>
-                <li>Best Team of the Year, 2021</li>
-                <li>Client Appreciation Award, 2020</li>
-            </ul>
-        </section>
-        
-        <footer class="card footer">
-            <p>I hereby declare that the above information is true to the best of my knowledge.</p>
-            <p><strong>Rahul Prajapati</strong></p>
-        </footer>
-    </div>
-</body>
-</html>
+               
